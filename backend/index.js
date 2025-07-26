@@ -1,8 +1,11 @@
 import express from "express";
+import cors from "cors";
 
 import addUserRoute from "./src/routes/addUserRoute.js";
 
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 
 app.use('/api',addUserRoute);
